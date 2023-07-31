@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*, *::before, *::after {
+    text-align: center;
+    box-sizing: border-box;
+}
 .conAc {
     font-size: 19px;
     margin-top: 20px;
@@ -10,7 +15,9 @@
 .provider {
     font-size: 19px;
 }
-
+body {
+    font-family: 'Lato', sans-serif;
+}
 .box {
     margin-top: 35;
     margin: 0;
@@ -24,11 +31,13 @@
 .receiver {
     width: 337px;
     height: 26px;
-    background-color: #c2d2fc;
-    border: 2px solid #463497;
+    background-color: #ffffff;
+    border: 0.2rem solid #000000;
     border-radius: 4px;
 }
-
+.meow {
+    padding: 2vh;
+}
 .label1 {
     flex-direction: column;
     display: flex;
@@ -37,14 +46,23 @@
 .label {
     flex-direction: column;
     display: flex;
+    margin-top: 20px;
 }
-
+.label>label {
+    margin-top: 0px;
+    border-collapse: collapse;
+}
+button {
+    margin-bottom: 20px;
+}
 .innerBox {
     width: 337px;
     height: 32px;
-    background-color: #c2d2fc;
-    border: 2px solid #463497;
+    background-color: #0bd272;
+    border: 2px dash rgb(0, 88, 63);
     border-radius: 4px;
+    color:#454545;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -59,9 +77,9 @@
 }
 
 .json {
-    color: white;
-    background-image: linear-gradient(#a8c0ff, #3f2b96);
-    width: 800px;
+    color: rgb(54, 54, 54);
+    background: rgb(237, 237, 237);
+    width: 100%;
     height: 180px;
     margin-top: 35px;
     border-radius: 10px;
@@ -72,4 +90,15 @@
     flex-direction: column;
     display: flex;
     font-size: 14px;
+    word-wrap: break-word;
+    
+}
+.json>*:not(h3) {
+    width: min-content;
+    max-width:100%;
+    height: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    text-wrap: wrap;
+    overflow-y: scroll;
 }

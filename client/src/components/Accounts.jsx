@@ -1,5 +1,6 @@
 import "./Main.css";
 import { useEffect , useState} from "react";
+import SendEther from "./SendEther";
 
 function Accounts({web3,setAddress}) {
 
@@ -47,7 +48,7 @@ function Accounts({web3,setAddress}) {
   return (
     <>
       <form className="label1" id="myForm">
-        <label htmlFor="">Select an account</label>
+        <label className="meow" htmlFor="">Select an account</label>
         <select className="innerBox" id="selectNumber" onChange={selectAccount}>
         <option>please select account</option>
          </select>
@@ -58,6 +59,8 @@ function Accounts({web3,setAddress}) {
       <span className="acBal">Account Balance:{balance}</span>
       <br></br>
       <span className="provider">Provider : {provider}</span>
+
+    
     </>
   );
 }

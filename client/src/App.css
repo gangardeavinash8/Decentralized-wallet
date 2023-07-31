@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   margin: 0;
@@ -12,13 +12,16 @@ body {
 
 .Flex {
   color: white;
-  background-image: linear-gradient(#a8c0ff, #3f2b96);
+  background-color: rgb(43, 43, 43);
   width: 600px;
-  height: 470px;
+  height: min-content;
   margin-top: 30px;
+  margin-bottom: 20px;
   border-radius: 15px;
-  border: 2px solid #463497;
-  box-shadow: 0 0.1px 8px rgba(255, 255, 255, 0.465);
+  border: 7px dashed #3c3c3c;
+  box-shadow: 0 0.1px 8px rgba(0, 0, 0, 0.465);
+  box-sizing: border-box;
+  padding: 3em;
 }
 
 .welMargin {

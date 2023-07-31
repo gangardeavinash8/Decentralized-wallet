@@ -1,17 +1,27 @@
 import "./Main.css";
 import { useEffect,useState } from "react";
+import "./Accounts"
 
 function SendEther({web3,account}) {
   const[receipt,setReceipt] =useState({});
   const [toggle,setToggle] =useState(false)
+  const[balance,setBalance]=useState()
 
   function sendEther(event){
 
     event.preventDefault();
 
-    const _to=document.querySelector("#to").value;
+    
+      const _to=document.querySelector("#to").value;
     const _value=document.querySelector("#value").value;
     const weiValue= web3.utils.toWei(_value,"ether");
+    
+
+   
+
+    
+
+    
     web3.eth.sendTransaction({
       from:account,
       to:_to,
@@ -23,7 +33,7 @@ function SendEther({web3,account}) {
     })
 
 
-  }
+   }
   return (
     <>
       <form className="box" onSubmit={sendEther}>
@@ -43,8 +53,8 @@ function SendEther({web3,account}) {
       <div className="box">
         <pre className="json">
           <h3>(Json Response)</h3>
-          <code>{toggle && JSON.stringify(receipt,["transactionHash","blockHash","blockNumber","gasUsed"],2
-          ) }</code>
+          <div className="avyachacoin">{toggle && JSON.stringify(receipt,["transactionHash","blockHash","blockNumber","gasUsed"],2
+          ) }</div>
         </pre>
       </div>
     </>
